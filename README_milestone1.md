@@ -23,33 +23,20 @@ This is how it is going to look at the end of milestone-1 of the project:
 In part 1, we will focus on the basic features of the app : displaying "smile" posts; creating new posts; liking posts. We will build both the frontend page templates and the backend routes for these features. We will also start building the database of the app.
 
 ---
-### Task 0: Install Python
+### Task 0: Get Started with the Provided Files 
 ---
-1. If you haven't yet, go ahead and install [Python](https://www.python.org/downloads/). (Your Python version should be 3.7.x or higher.)
-
-      **Important** (Windows users):
-      Please make sure to add the Python path to Windows Path. Read more [here](https://superuser.com/questions/143119/how-to-add-python-to-the-windows-path).
-      Also, Windows installer now includes an option to add python.exe to the system search path. When you install Python, [select the "Add Python 3.x to PATH" option](https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwit9NyWmafWAhXH44MKHaV9CfkQjRwIBw&url=https%3A%2F%2Floadbalancerblog.com%2Fblog%2F2015%2F11%2Fpython-35-install&psig=AFQjCNG10siDMl9gL49FY-3IQHICIPD2pw&ust=1505565091140981). If selected, the install directory will be added to your PATH.
-
-      **Important** (Mac/Linux users): 
+   **Important** (Mac/Linux users): 
       Mac and Linux systems have Python 2.x installed already. When you type and run `python` on the terminal, it will run the Python2 interpreter. To launch Python 3, run `python3` and to run the `python3` installer run `pip3`.
+ 
 
-2. If you have a Windows system I strongly suggest you to install a terminal emulator program to run the command line arguments. The following link provides a list of popular terminal programs for windows. [https://www.puttygen.com/windows-terminal-emulators](https://www.puttygen.com/windows-terminal-emulators)
-   If you don't want to install a new program, you may use the Windows command prompt  `cmd` or VS Code terminal.  
-   
----
-### Task 1: Get Started with the Provided Files 
----
 To help you start we have provided some boilerplate files that you will have to modify to implement the project.
 
 Similar to the StudentApp exercise, you will commit your code to a repository under the CS 3733 GitHub classroom organization : `WPI-CS3733-2024D`  
 
 
-1. Copy the below GitHub Assignment URL, and paste and open in a browser:
+1. Accept the GitHub classroom assignment ; GitHub assignment link is available on Canvas, on the Warmup 2: SmileApp assignment page. 
 
-    [https://classroom.github.com/a/wi4wRory](https://classroom.github.com/a/wi4wRory)
-
-    Accept the assignment and follow the steps. An assignment repository will be created for you under the  `WPI-CS3733-2024D` organization. GitHub will automatically commit the starter code provided to this repository. This is your remote repo.
+Once you accept the assignment, a  repository will be created for you under the  `WPI-CS3733-2024D` organization. Refresh the page to view the repository link. GitHub will automatically commit the starter code provided to this repository. This is your remote repo. 
  
 2. Create an empty project directory locally. Make sure this directory does not have another Git instance in its path. i.e. No parent directory and no child directory may also have a git instance.
    * Create the directory and go into that directory:   
@@ -108,7 +95,7 @@ Similar to the StudentApp exercise, you will commit your code to a repository un
         git checkout milestone1
     ```
 
-8. You will find the following provided files in the given started code:
+8. You will find the following provided files in the given starter code:
 
 ```bash
     * app
@@ -156,7 +143,7 @@ Similar to the StudentApp exercise, you will commit your code to a repository un
     ```
         $ pip install -r requirements.txt
     ```
-    *Note for Windows users*: If `pip` is not installed in your system, you need to also add the Python\Scripts path to the Windows Path. On Windows, Python will typically be installed under the directory `C:\Users\<username>\AppData\Local\Programs\Python\Python3.x`. Locate your Python installation directory, make sure `pip` or `pip3` is under the `Scripts` directory, and add the "path of Scripts directory" to the Path environment variable. 
+    <!-- *Note for Windows users*: If `pip` is not installed in your system, you need to also add the Python\Scripts path to the Windows Path. On Windows, Python will typically be installed under the directory `C:\Users\<username>\AppData\Local\Programs\Python\Python3.x`. Locate your Python installation directory, make sure `pip` or `pip3` is under the `Scripts` directory, and add the "path of Scripts directory" to the Path environment variable.  -->
 
     As we need these packages in our application, I will include the commands for installing them. If you already installed all packages in `requirements.txt`, you can skip those.  
    
@@ -182,15 +169,14 @@ Similar to the StudentApp exercise, you will commit your code to a repository un
   ```
     python smile.py
   ```
-
     Note:  Smile App starter code uses a "factory method" (i.e., `create_app()`) to create the flask application in `smile.py`. This is similar to the Student App structure in v.14. 
     In the `.flaskenv` file, we set the `FLASK_APP` environment variable `smile.py` to specify how flask should load the application. However, if the `python-dotenv` package is not installed, it will not import the `FLASK_APP` environment variable correctly and  it will try to access the database before it is initialized for the app and it will give the following error: "sqlalchemy.exc.OperationalError". So, when the `student.db` file is created for first time, make sure that you launch your application using the command 
-    ` python smile.py` or make sure that `python-dotenv` is installed. 
+    `python smile.py` or make sure that `python-dotenv` is installed. 
     Alternatively, you can use the following command:
 
-    On Windows:  `set FLASK_DEBUG=1 && set FLASK_APP=smile.py && python -m flask run`
-        
-    On Mac:  `export FLASK_DEBUG=1 && export FLASK_APP=smile.py && python -m flask run`
+        On Windows:  `set FLASK_DEBUG=1 && set FLASK_APP=smile.py && python -m flask run`
+            
+        On Mac:  `export FLASK_DEBUG=1 && export FLASK_APP=smile.py && python -m flask run`
 
 * Open a browser (Chrome is recommended) and open the URL 'http://localhost:5000/'
     At this point, the page should look like the following. 
@@ -222,7 +208,7 @@ You will now be editing locally and complete the `milestone1` tasks. **Remember 
 
 
 ---
-### Task 2: Display "Smile" Posts
+### Task 1: Display "Smile" Posts
 ---
 The first page you'll build is the home page. This page will show all smiles posted by everyone.
 
@@ -384,7 +370,7 @@ For this task you will edit `/app/View/static/css/main.css` in addition to the H
     * Write the updated post back to the database.
     * Re-direct to `routes.index` to reload the main page with the updated post. 
 
-2. Now, in `_post.html`, add an HTML form element for submitting the `routes.like` post request. The template of the form is given below. Set the `action` of this form  (i.e., `###`) to the URL of the `routes.like` route. (Hint: use `url_for`) See the class exercise for examples on how to pass the route variable to `url_for`. Don't forget to pass the `post_id` attribute for the `like` route.
+2. Now, in `_post.html`, add an HTML form element for submitting the `routes.like` post request. The template of the form is given below. Set the `action` of this form  (i.e., `###`) to the URL of the `routes.like` route. (Hint: use `url_for`) See the ["Flask Class Exercise"](https://github.com/WPI-arslanay/FlaskLectureExample) for examples on how to pass the route variable to `url_for`. Don't forget to pass the `post_id` attribute for the `like` route.
     ```html
     <form action="###" method="post">
     <input type="submit" value="" >

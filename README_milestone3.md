@@ -379,13 +379,13 @@ When you complete milestone3 , the main page will be similar to the following:
 Run the provided automated tests under `/tests` directory:
   * `test_models.py` includes unit tests for the model. These tests use the `unittest`  testing framework.
     To run them run the following command on the terminal. 
-       * ```python -m unittest -v tests\test_models.py```
+       * ```python -m unittest -v tests//test_models.py```
 
   * `test_routes.py` includes functional tests , testing the major routes of the app. These test use `pytest` framework.
     To run them run the following command on the terminal. 
-       * ```pytest -v tests\test_routes.py```
+       * ```pytest -v tests//test_routes.py```
 
-In your term project, you will write test similar to these. 
+In your term project, you will write tests similar to these. 
 
 
 

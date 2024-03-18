@@ -39,7 +39,7 @@ In Milestone2,  you will start with your milestone-1 code and add additional fea
 7. How to run the app:
    * First run the backend (this will run the app in debug mode):
 
-     `set FLASK_DEBUG=1 && python -m flask run`
+     `python smile.py`
    * Open a browser (Chrome is recommended) and open the URL 'http://localhost:5000/'
      At this point, the page should look like the following.
 
@@ -124,7 +124,7 @@ In our Smile Portal app, the users will be able to associate some predefined tag
 
    After the database is re-created, no smile posts will be displayed on the main page.
 
-   2. In `models.py`, add a SQLAlchemy association table called `postTags` (use `db.Table` SQLAlchemy funtion to create this table - for examples, see the `assigned` table in the [Flask class example](https://github.com/WSU-CptS-arslanay/FlaskLectureExample/tree/main/13-SQLAlchemy_ManytoMany) OR the `enrolled` table we defined in StudentApp application (Version 10.b)). This table will store the associations between posts and the tags. Note that a post may be associated with multiple tags, and a tag can be associated to many posts. 
+   2. In `models.py`, add a SQLAlchemy association table called `postTags` (use `db.Table` SQLAlchemy funtion to create this table - for examples, see the `assigned` table in the [Flask class example](https://github.com/WPI-arslanay/FlaskLectureExample/tree/main/13-SQLAlchemy_ManytoMany) OR the `enrolled` table we defined in StudentApp application (Version 10.b)). This table will store the associations between posts and the tags. Note that a post may be associated with multiple tags, and a tag can be associated to many posts. 
 
 **Important note:** In the file, `postTags` definition should be placed before both `Post` and `Tag` definitions. 
 
