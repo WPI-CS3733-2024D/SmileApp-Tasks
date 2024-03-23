@@ -23,7 +23,7 @@ This is how it is going to look at the end of milestone-1 of the project:
 In part 1, we will focus on the basic features of the app : displaying "smile" posts; creating new posts; liking posts. We will build both the frontend page templates and the backend routes for these features. We will also start building the database of the app.
 
 ---
-### Task 0: Get Started with the Provided Files 
+### Task 1: Get Started with the Provided Files 
 ---
    **Important** (Mac/Linux users): 
       Mac and Linux systems have Python 2.x installed already. When you type and run `python` on the terminal, it will run the Python2 interpreter. To launch Python 3, run `python3` and to run the `python3` installer run `pip3`.
@@ -208,7 +208,7 @@ You will now be editing locally and complete the `milestone1` tasks. **Remember 
 
 
 ---
-### Task 1: Display "Smile" Posts
+### Task 2: Display "Smile" Posts
 ---
 The first page you'll build is the home page. This page will show all smiles posted by everyone.
 
