@@ -1,4 +1,4 @@
-# Warmup Project - CS 3733 - 2024 D Term
+# Warmup Project - CS 3733 - 2024 B Term
 Before we jump into the main team projects, we will practice  web
 development by building a simple message portal called "Smile". 
 
